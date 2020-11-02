@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Bookmark Manager",
+  "version": "1.0",
+  "description": "A user friendly bookmark manager",
+  "icons":{
+    "16": "images/bookmark16.png",
+    "48": "images/bookmark48.png",
+    "128": "images/bookmark128.png"
+  },
+  "browser_action":{
+    "default_icon": {
+      "16": "images/bookmark16.png",
+      "24": "images/bookmark24.png",
+      "32": "images/bookmark32.png"
+    },
+    "default_title": "Bookmark Manager"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_scripts/sidebar.html"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+        "background_scripts/background.js"
+    ]
+  }
+}
